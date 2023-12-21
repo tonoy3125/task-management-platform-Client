@@ -69,6 +69,20 @@ const Login = () => {
             })
     }
 
+    const handleGithubSignIn = () => {
+        signInWithGithub()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : "/")
+                swal("Good job!", "User logged Successfully", "success");
+
+            })
+            .catch(error => {
+                const errormsg = error.message;
+                toast.error(errormsg);
+            })
+    }
+
 
     return (
         <div className="bg-[#F3F3F3]">
