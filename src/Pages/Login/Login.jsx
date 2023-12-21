@@ -1,4 +1,16 @@
+/* eslint-disable no-unused-vars */
+import { AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEyeInvisible } from 'react-icons/ai';
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// import Swal from 'sweetalert2/dist/sweetalert2.js'
 
+// import 'sweetalert2/src/sweetalert2.scss'
+import swal from 'sweetalert';
 
 const Login = () => {
     return (
