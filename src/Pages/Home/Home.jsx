@@ -1,4 +1,5 @@
 import ClientSection from "../Client/ClientSection";
+import FaqSection from "../Faq/FaqSection";
 import Banner from "./Banner";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <ClientSection></ClientSection>
+            <FaqSection></FaqSection>
         </div>
     );
 };
