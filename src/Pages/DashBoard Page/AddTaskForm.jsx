@@ -47,14 +47,14 @@ const AddTaskForm = (props) => {
                 <div className="flex flex-col gap-8 my-8">
                     <label
                         htmlFor="title"
-                        className="text-3xl uppercase font-lora font-semibold tracking-widest"
+                        className="text-3xl uppercasey font-semibold font-poppins"
                     >
                         Title
                     </label>
                     <input
                         type="text"
-                        placeholder="title"
-                        className="font-roboto text-2xl p-4 outline-none border-2 border-darkOne rounded-lg"
+                        placeholder="Title"
+                        className="font-roboto text-2xl p-4 outline-none border rounded-lg"
                         {...register('title', { required: true })}
                     />
                     {errors.title && (
@@ -68,13 +68,13 @@ const AddTaskForm = (props) => {
                 <div className="flex flex-col gap-8 my-8">
                     <label
                         htmlFor="description"
-                        className="text-3xl uppercase font-lora font-semibold tracking-widest"
+                        className="text-3xl uppercase font-poppins font-semibold"
                     >
-                        description
+                        Description
                     </label>
                     <input
                         type="text"
-                        placeholder="description"
+                        placeholder="Description"
                         className="font-roboto text-2xl p-4 outline-none border-2 border-darkOne rounded-lg"
                         {...register('description', { required: true })}
                     />
@@ -88,7 +88,7 @@ const AddTaskForm = (props) => {
                 <div className="flex flex-col gap-8 my-8">
                     <label
                         htmlFor="date"
-                        className="text-3xl uppercase font-lora font-semibold tracking-widest"
+                        className="text-3xl uppercase font-poppins font-semibold"
                     >
                         Set Deadline
                     </label>
@@ -96,7 +96,7 @@ const AddTaskForm = (props) => {
                         type="date"
                         name=""
                         id=""
-                        className="font-lora p-2 rounded-lg text-xl"
+                        className="font-poppins border p-2 rounded-lg text-xl"
                         {...register('deadline', { required: true })}
                     />
                     {errors.deadline && (
@@ -110,7 +110,7 @@ const AddTaskForm = (props) => {
                 <div className="flex flex-col gap-8 my-8">
                     <label
                         htmlFor=""
-                        className="text-3xl uppercase font-lora font-semibold tracking-widest"
+                        className="text-3xl uppercase font-poppins font-semibold"
                     >
                         Set Priority
                     </label>
@@ -122,7 +122,7 @@ const AddTaskForm = (props) => {
                     >
                         <option
                             value="low"
-                            className="font-lora text-xl outline-none border-2 border-darkOne"
+                            className="font-poppins text-xl outline-none border-2 border-darkOne"
                         >
                             Low Priority
                         </option>
