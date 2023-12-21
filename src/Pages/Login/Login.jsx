@@ -56,6 +56,20 @@ const Login = () => {
     }
 
 
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : "/")
+                swal("Good job!", "User logged Successfully", "success");
+            })
+            .catch(error => {
+                const errormsg = error.message;
+                toast.error(errormsg);
+            })
+    }
+
+
     return (
         <div className="bg-[#F3F3F3]">
             <div className="container mx-auto pt-9 pb-[180px]">
