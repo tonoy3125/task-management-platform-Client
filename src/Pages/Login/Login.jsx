@@ -13,6 +13,49 @@ import toast, { Toaster } from "react-hot-toast";
 import swal from 'sweetalert';
 
 const Login = () => {
+
+    const [showPassword, setShowPassword] = useState(false)
+    const { signIn, setLoading, signInWithGoogle, signInWithGithub } = useContext(AuthContext)
+    const location = useLocation()
+    console.log(location)
+    const navigate = useNavigate()
+
+    const handleLogin = e => {
+        e.preventDefault()
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password)
+
+        // if (password.length < 6) {
+        //     swal("Password must be at least 6 characters");
+        //     return
+        // }
+
+        if (!/^.{6,}$/.test(password)) {
+            toast.error("Password must be at least 6 characters");
+            return
+        }
+
+
+        signIn(email, password)
+            .then(result => {
+                console.log('Navigating to:', location?.state ? location.state : "/");
+                navigate(location?.state ? location.state : "/")
+                swal("Good job!", "User logged Successfully", "success");
+            })
+
+
+
+
+            .catch(error => {
+                const errormsg = error.message;
+                toast.error(errormsg);
+                setLoading(false)
+                e.target.reset()
+            })
+    }
+
+
     return (
         <div className="bg-[#F3F3F3]">
             <div className="container mx-auto pt-9 pb-[180px]">
