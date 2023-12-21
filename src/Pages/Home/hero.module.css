@@ -1,0 +1,8 @@
+.heroBg {
+    position: relative;
+    /* Ensure the overlay is positioned relative to this container */
+    background-image: url('../../assets/3139802_37653.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
