@@ -9,6 +9,7 @@ import DrawerLayout from "../Layout/DashBoard/DrawerLayout";
 import NewTask from "../Pages/DashBoard Page/NewTask/NewTask";
 import EditTask from "../Pages/DashBoard Page/NewTask/EditTask";
 import PrivateRoute from "./PrivateRoute";
+import Contact from './../Pages/Contact/Contact';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>,
+            },
+            {
+                path: "/contact",
+                element: <Contact></Contact>,
             }
         ]
     },
