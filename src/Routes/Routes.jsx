@@ -8,6 +8,7 @@ import Register from './../Pages/Register/Register';
 import DrawerLayout from "../Layout/DashBoard/DrawerLayout";
 import NewTask from "../Pages/DashBoard Page/NewTask/NewTask";
 import EditTask from "../Pages/DashBoard Page/NewTask/EditTask";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/dashboard",
-        element: <DrawerLayout></DrawerLayout>,
+        element: <PrivateRoute><DrawerLayout></DrawerLayout></PrivateRoute>,
         children: [
             {
                 path: "newtask",
