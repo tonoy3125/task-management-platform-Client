@@ -10,11 +10,13 @@ import NewTask from "../Pages/DashBoard Page/NewTask/NewTask";
 import EditTask from "../Pages/DashBoard Page/NewTask/EditTask";
 import PrivateRoute from "./PrivateRoute";
 import Contact from './../Pages/Contact/Contact';
+import ErrorElement from "../Layout/ErrorElement";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <ErrorElement></ErrorElement>,
         children: [
             {
                 path: "/",
