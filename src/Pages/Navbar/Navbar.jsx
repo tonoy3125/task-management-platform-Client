@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import Logo from '../../assets/calendar-with-checklist-date-schedule-3d-icon-removebg-preview.png';
+import Logo from '../../assets/logo2.gif';
 import { FaBars } from 'react-icons/fa6';
 import Swal from 'sweetalert2';
 import { useContext } from 'react';
@@ -76,7 +76,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex justify-center items-center">
-                    <img src={Logo} width={100} height={100} alt="" />
+                    <img src={Logo}  alt="" />
                     <h1 className="text-xl font-lora">Task Management</h1>
                 </div>
             </div>
