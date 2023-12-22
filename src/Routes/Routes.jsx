@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import Contact from './../Pages/Contact/Contact';
 import ErrorElement from "../Layout/ErrorElement";
 
+
 const router = createBrowserRouter([
     {
         path: "/",
